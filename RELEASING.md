@@ -48,27 +48,27 @@ a long-lived PyPI API token to the repository.
    source .release-venv/Scripts/activate
    python -m pip install dist/*.whl
    cd /tmp
-   python -I -c "import numbr; assert numbr.__version__ == '2.1.0'; assert numbr.Cast('Ⅳ', 'Ordinal Word') == 'fourth'"
+   python -I -c "import numbr; assert numbr.__version__ == '2.1.1'; assert numbr.Cast('Ⅳ', 'Ordinal Word') == 'fourth'"
    ```
 
 6. Review the wheel and source archive contents. Commit the release changes and
    merge them into `main` only after all required checks pass.
 
-## Publish 2.1.0
+## Publish 2.1.1
 
 1. On GitHub, draft a new release targeting `main`.
-2. Create tag `v2.1.0` and use release title `numbr 2.1.0`.
-3. Generate the release notes, then reconcile them with the `2.1.0` section in
+2. Create tag `v2.1.1` and use release title `numbr 2.1.1`.
+3. Generate the release notes, then reconcile them with the `2.1.1` section in
    `CHANGELOG.md`.
 4. Save a draft if more review is needed. Publishing the release is the point
    of no return: it triggers `.github/workflows/publish.yml`.
-5. Confirm that the workflow built both `numbr-2.1.0.tar.gz` and
-   `numbr-2.1.0-py3-none-any.whl`, validated the tag/version match, and published
+5. Confirm that the workflow built both `numbr-2.1.1.tar.gz` and
+   `numbr-2.1.1-py3-none-any.whl`, validated the tag/version match, and published
    through the `pypi` environment.
 6. Confirm the new release on PyPI and install it in a fresh environment:
 
    ```bash
-   python -m pip install --no-cache-dir numbr==2.1.0
+   python -m pip install --no-cache-dir numbr==2.1.1
    python -c "import numbr; print(numbr.__version__)"
    ```
 
