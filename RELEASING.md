@@ -11,7 +11,7 @@ release.
    supports it.
 2. In the PyPI `numbr` project, add a GitHub Actions Trusted Publisher with:
 
-   - owner: `cedricmoorejr`
+   - owner: `doydl-technologies`
    - repository: `numbr`
    - workflow: `publish.yml`
    - environment: `pypi`
